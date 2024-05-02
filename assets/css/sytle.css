@@ -356,3 +356,11 @@ header .container{
         font-size: 14px;
     }
 }
+@media screen and (max-width: 768px) {
+    .about_content h1, .about_content p {
+        max-width: 90%; /* Limita el ancho máximo del texto para que se ajuste mejor en pantallas pequeñas */
+        margin: 10px auto; /* Centra el texto y ajusta el margen */
+        overflow: hidden; /* Oculta cualquier parte del texto que se desborde */
+        text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto que se desborde */
+    }
+}
