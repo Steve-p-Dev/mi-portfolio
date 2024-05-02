@@ -362,5 +362,7 @@ header .container{
         margin: 10px auto; /* Centra el texto y ajusta el margen */
         overflow: hidden; /* Oculta cualquier parte del texto que se desborde */
         text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto que se desborde */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        line-height: 1.5; /* Ajusta el espaciado entre líneas */
     }
 }
