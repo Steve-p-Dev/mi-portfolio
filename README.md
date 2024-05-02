@@ -1,4 +1,4 @@
-# Descripción :ear:
+# Descripción 📖:
 Este es mi portfolio creado con html, css y javascript 
 ## Autor :bicyclist:
 **Steven Venegas**
