@@ -5,7 +5,7 @@ Este es mi portfolio creado con html, css y javascript
 * [LinkedIn] (www.linkedin.com/in/venegas-rengifo-steven-patricio-021867239)
 
 ## Ver ejemplo en vivo :arrow_forward:
-
+https://steve-p-dev.github.io/mi-portfolio/
 ## Instalación :sos:
 Este proyecto no necesita de instalación. Simplemente abre la carpeta o haz doble click en el .html
 
