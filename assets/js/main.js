@@ -70,7 +70,7 @@ function resumeActive () {
 
     pages.forEach(page => {
         const sectionHeight = page.offsetHeight;
-        const sectionTop = page.offsetTop -120;
+        const sectionTop = page.offsetTop - 120;
 
         let sectionId = page.getAttribute('id');
 
@@ -82,4 +82,66 @@ function resumeActive () {
     })
 }
 
-window.addEventListener('scroll', resumeActive)
+window.addEventListener('scroll', resumeActive);
+
+// Portfolio
+let filterItems = document.querySelectorAll('.portfolio_filters li')
+
+function activePortfolio () {
+    filterItems.forEach(el => {
+        el.classList.remove('filter-active')
+        this.classList.add('filter-active')
+    });
+}
+
+filterItems.forEach(el => {
+    el.addEventListener('click', activePortfolio);
+});
+
+// mixitup filter portfolio
+let mixerPortfolio = mixitup('.portfolio_wrap-container', {
+    selectors:{
+        target: '.portfolio_item'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+// Testimonail swiper
+let swiper = new Swiper(".testimonial_container", {
+    effect: 'slide',
+    loop: true,
+    slidesPerView: 1,
+    grabCursor: true,
+    spaceBetween: 100,
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        }
+    }
+});
+
+//Services 
+let modalBtns = document.querySelectorAll('.services_button'),
+    modalViews = document.querySelectorAll('.services_modal'),
+    modalClose = document.querySelectorAll('.modal_close-icon');
+
+
+let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modal');
+}
+
+modalBtns.forEach((modalBtn, i)=>{
+    modalBtn.addEventListener('click', ()=>{
+        modal(i)
+    })
+})
+
+modalClose.forEach(el => {
+    el.addEventListener('click', () => {
+        modalViews.forEach(modalView => {
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
